@@ -8,16 +8,16 @@
 # License: MIT
 #
 
-"""This module exports the jscs plugin class."""
+"""This module exports the jsxcs plugin class."""
 
 from SublimeLinter.lint import Linter
 
 
-class Jscs(Linter):
+class Jsxcs(Linter):
 
-    """Provides an interface to jscs."""
+    """Provides an interface to jsxcs."""
 
-    syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)')
+    syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)', 'jsx', 'javascript_jsx')
     cmd = 'jsxcs -r checkstyle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
