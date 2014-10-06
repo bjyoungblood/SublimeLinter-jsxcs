@@ -17,11 +17,11 @@ class Jscs(Linter):
 
     """Provides an interface to jscs."""
 
-    syntax = ('javascript', 'html', 'javascriptnext')
-    cmd = 'jscs -r checkstyle'
+    syntax = ('javascript', 'html', 'javascriptnext', 'javascript (jsx)')
+    cmd = 'jsxcs -r checkstyle'
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.0.10'  # 1.0.10 introduced checkstyle reporter
+    version_requirement = '>= 0.0.3'  # 1.0.10 introduced checkstyle reporter
     regex = (
         r'^\s+?<error line="(?P<line>\d+)" '
         r'column="(?P<col>\d+)" '
